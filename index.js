@@ -10,7 +10,7 @@ const prevButton = document.querySelector('[data-js="button-prev"]');
 const nextButton = document.querySelector('[data-js="button-next"]');
 const pagination = document.querySelector('[data-js="pagination"]');
 
-// States chaged to let
+// States changed to let
 let maxPage = 1;
 let page = 1;
 let searchQuery = "";
@@ -26,6 +26,8 @@ async function fetchCharacters() {
     }
 
     const result = await response.json();
+
+    cardContainer.innerHTML = "";
 
     result.results.forEach((character) => {
       const card = createCharacterCard(character);
