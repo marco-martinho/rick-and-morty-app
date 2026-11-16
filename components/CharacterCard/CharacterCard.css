@@ -1,5 +1,11 @@
 .card-container {
   margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap; /* Kartlar ekrana sığmadığında otomatik olarak bir alt satıra taşar */
+  justify-content: center; /* Tüm kartları sayfanın tam ortasına hizalar */
+  gap: 20px;
+  list-style: none;
+  padding: 0;
 }
 .card {
   width: 300px;

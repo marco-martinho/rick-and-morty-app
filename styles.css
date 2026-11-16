@@ -11,6 +11,9 @@
 }
 
 :root {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
   --color-primary: rgb(7, 7, 92);
   --color-secondary: #efe5ef;
   --font-family: system-ui;
