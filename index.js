@@ -26,6 +26,8 @@ async function fetchCharacters() {
     }
 
     const result = await response.json();
+    maxPage = result.info.pages;
+    pagination.textContent = `${page} / ${maxPage}`;
 
     cardContainer.innerHTML = "";
 
@@ -33,11 +35,23 @@ async function fetchCharacters() {
       const card = createCharacterCard(character);
       cardContainer.append(card);
     });
-
-    console.log(result);
-    return result;
   } catch (error) {
     console.error(error.message);
   }
 }
+
+nextButton.addEventListener("click", () => {
+  if (page < maxPage) {
+    page++;
+    fetchCharacters();
+  }
+});
+
+prevButton.addEventListener("click", () => {
+  if (page > 1) {
+    page--;
+    fetchCharacters();
+  }
+});
+
 fetchCharacters();
