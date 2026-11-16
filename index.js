@@ -1,4 +1,5 @@
 import { createCharacterCard } from "./components/CharacterCard/CharacterCard.js";
+import { createSearchButton } from "./components/SearchBar/SearchBar.js";
 
 const searchBar = document.querySelector('[data-js="search-bar"]');
 const navigation = document.querySelector('[data-js="navigation"]');
@@ -43,4 +44,8 @@ async function fetchCharacters() {
   }
 }
 
-fetchCharacters();
+createSearchButton(searchBar, (query) => {
+  searchQuery = query;
+  page = 1;
+  fetchCharacters();
+});
