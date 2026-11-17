@@ -1,12 +1,16 @@
 .search-bar-container {
   width: 300px;
+  flex-shrink: 0;
 }
 
 .search-bar {
-  padding: 10px 20px;
+  height: 35px;
+  padding: 0 10px;
   background-color: var(--color-secondary);
+  border: 2px solid var(--control-color);
   display: grid;
   grid-template-columns: 1fr 24px;
+  align-items: center;
 }
 
 .search-bar__input {
@@ -25,5 +29,6 @@
 }
 
 .search-bar__icon {
-  width: 20px;
+  width: 14px;
+  filter: brightness(0) invert(1);
 }

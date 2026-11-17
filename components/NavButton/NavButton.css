@@ -1,7 +1,13 @@
 .button {
-  border: none;
+  height: 35px;
+  min-width: 90px;
+  padding: 0 15px;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border: 2px solid var(--control-color);
+  cursor: pointer;
 }
 
 .button:hover {
-  background-color: var(--color-secondary);
+  background-color: #606060;
 }

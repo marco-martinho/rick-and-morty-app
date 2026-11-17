@@ -5,21 +5,40 @@
   justify-content: center; /* Tüm kartları sayfanın tam ortasına hizalar */
   gap: 20px;
   list-style: none;
-  padding: 0;
 }
+
 .card {
   width: 300px;
   background-color: var(--color-secondary);
+  border: 2px solid var(--card-color);
+  padding: 5px;
+  overflow: hidden;
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .card__info {
   display: grid;
   grid-template-columns: auto 1fr;
 }
+
 .card__content {
   padding: 10px 20px 20px;
   display: grid;
-  gap: 20px;
+  grid-template-rows: 3lh auto;
+  gap: 40px;
+}
+
+.card__content h2 {
+  line-height: 1.2;
+}
+
+.card__title {
+  color: var(--card-color);
 }
 
 .card__info-description {
